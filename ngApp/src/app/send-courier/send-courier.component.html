@@ -1,0 +1,48 @@
+<app-navbar></app-navbar>
+   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ <link href="https://fonts.googleapis.com/css?family=Nunito:600,700,900" rel="stylesheet">
+
+</head>
+<body id="body">
+
+<div id="login-card" class="card">
+<div class="card-body">
+  <h2 class="text-center">Courier Details</h2>
+  <br>
+  <form>
+    <div class="form-group">
+      <input [(ngModel)]="courierData.yemail" name="email" type="email" class="form-control" id="email" placeholder="Enter your email"  required>
+    </div>
+    <div class="form-group">
+      <input [(ngModel)]="courierData.rname" name="name" type="text" class="form-control" id="email" placeholder="Enter Reciever Name"  required>
+    </div>
+    
+    <div class="form-group">
+      <input [(ngModel)]="courierData.remail" name="email" type="email" class="form-control" id="email" placeholder="Enter Reciever email"  required>
+    </div>
+    <div class="form-group">
+      <input [(ngModel)]="courierData.rweight" name="number" type="email" class="form-control" id="email" placeholder="Enter weight of courier"  required>
+    </div>
+    <div class="form-group">
+      <input  [(ngModel)]="courierData.rstate" name="state" type="text" class="form-control" id="email" placeholder="Enter Destination State Name"  required>
+    </div>
+    <div class="form-group">
+      <input  [(ngModel)]="courierData.rdistrict" name="district" type="text" class="form-control" id="email" placeholder="Enter Destination district Name"  required>
+    </div>
+    <button (click)="sendCourier()" type="submit" id="button" class="btn btn-primary deep-purple btn-block ">Submit</button>
+
+
+  </form>
+</div>
+<div> 

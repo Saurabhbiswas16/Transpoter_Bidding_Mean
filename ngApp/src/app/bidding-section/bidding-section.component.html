@@ -1,0 +1,57 @@
+<app-navbar></app-navbar>
+
+
+<div class="row mt-5 py-5">
+    <div class="col-md-4 mb-3" *ngFor="let courier of allcourier">
+      <div class="card text-center"  style="width: 25rem;">
+        <!-- <div class="card-body"> -->
+            <table class="card-table table-bordered">
+                <tr>
+                    <td class="p-3 mb-2">Weight of product</td>
+                    <td class="p-3 mb-2 bg-info text-white">{{courier.rweight}} Kg</td>
+                    
+                </tr>
+                <tr>
+                    <td class="p-3 mb-2">Denstination district</td>
+                    <td class="p-3 mb-2 bg-info text-white">{{courier.rdistrict}}</td>
+                    
+                </tr>
+                <tr>
+                    <td class="p-3 mb-2">Denstination state</td>
+                    <td class="p-3 mb-2 bg-info text-white">{{courier.rstate}}</td>
+                    
+                </tr>
+            </table>
+            <div class="card-footer">
+                Current price  <input style="border-radius: 25px;border-style:none;border-color: cyan;" type="number" max="{{courier.rprice}}"
+                 (change)="priceChange($event.target.value)" name="bidchange" value="{{courier.rprice}}" name="number">
+                <br>
+                <br>
+                <button (click)="bidValue(courier)" type="submit" id="button" *ngIf="_authService.canBid(courier.yemail)" class="btn btn-success deep-purple btn-block ">Bid</button>
+            <button (click)="confirmBid(courier)" type="submit" id="button" *ngIf=" !_authService.canBid(courier.yemail)" class="btn btn-success deep-purple btn-block ">Confirm</button>
+            </div>
+            <!-- <div clsss="card-text">
+                <span>Weight of product: </span><span>{{courier.rweight}}</span>
+            </div>
+            <div clsss="card-text">
+                <span>Denstination district: </span><span>" {{courier.rdistrict}} "</span>
+            </div>
+            <div clsss="card-text">
+                <span>Denstination state:   </span><span>{{courier.rstate}}</span>
+            </div>
+            <div clsss="card-text">
+                <input style="border-radius: 25px;border-style:none;" type="number" max="{{courier.rprice}}" (change)="priceChange($event.target.value)" name="bidchange" value="{{courier.rprice}}" name="number">
+            </div>
+            <br>
+          
+            <div class="card-footer">
+                <button (click)="bidValue(courier)" type="submit" id="button" *ngIf="_authService.canBid(courier.yemail)" class="btn btn-success deep-purple btn-block ">Bid</button>
+            <button (click)="confirmBid(courier)" type="submit" id="button" *ngIf=" !_authService.canBid(courier.yemail)" class="btn btn-success deep-purple btn-block ">Confirm</button>
+            </div> -->
+            
+        <!-- </div> -->
+
+      </div>
+    </div>
+  </div>
+  

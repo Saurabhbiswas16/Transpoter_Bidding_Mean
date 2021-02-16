@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.918);
+    color: white;
+    
+}
+footer i{
+    font-size: 20px;
+    border: 1px black solid;
+    border-radius: 50%;
+    padding: 7px;
+    color: black;
+    background-color: rgb(109, 240, 22);
+
+}
+footer .icon span{
+    margin-left: 20px;
+}
+.glitter{
+    color: rgb(109, 240, 22);
+    background-image: linear-gradient(to left,rgb(34, 139, 34),rgb(7, 207, 7),rgb(173, 252, 17));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    
+}
+footer p span{
+    margin: 0;
+}
+.logo{
+    padding-left:50px;
+}
+.bidding{
+    margin-top: -30px;
+}
+.contact-footer
+{
+    position: fixed;
+}
+.icon-box
+{
+    margin-left: -15%;
+    
+}
